@@ -8,12 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "autoprefixer": "^9.8.6",
     "next": "9.5.1",
     "postcss-import": "^12.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-embed": "^3.3.2",
+    "react-syntax-highlighter": "^13.2.1",
     "tailwindcss": "^1.6.2"
   }
 }

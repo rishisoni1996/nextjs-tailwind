@@ -1,6 +1,15 @@
 import React from 'react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark, atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 export default function Custom() {
+    const codeString = `import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+    import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+    import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
+    
+    SyntaxHighlighter.registerLanguage('jsx', jsx);
+    `;
+
     return (
         <>
             <header className="text-gray-700 body-font">
@@ -47,6 +56,12 @@ export default function Custom() {
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-20">
                         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
+                        <div>
+                        <SyntaxHighlighter language="typescript" style={atomDark}>
+                          {codeString}
+                        </SyntaxHighlighter>
+
+                        </div>
                         <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
                     </div>
                     <div className="flex flex-wrap -m-2">
